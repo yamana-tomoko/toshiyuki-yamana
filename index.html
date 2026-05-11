@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山名敏之 Toshiyuki Yamana — ピリオド鍵盤楽器奏者・研究者</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sabre:      #1A2F45;
+    --agatha:     #2C4A6E;
+    --agatha-mid: #3a5f8a;
+    --gold:       #C9A84C;
+    --gold-light: #E8D5A0;
+    --gold-pale:  #f5edd8;
+    --cream:      #F7F4ED;
+    --white:      #ffffff;
+    --text-dark:  #1A2F45;
+    --text-mid:   #3d5068;
+    --text-muted: #7a8fa3;
+    --border:     rgba(201,168,76,0.35);
+    --border-strong: rgba(201,168,76,0.7);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ── GOLD FRAME ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 10px;
+    border: 1px solid var(--border-strong);
+    pointer-events: none;
+    z-index: 9999;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 13px;
+    border: 0.5px solid var(--border);
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--sabre);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--gold);
+  }
+  .site-header::before,
+  .site-header::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: var(--border);
+    margin: 0 2rem;
+  }
+  .site-header::before { margin-bottom: 1.5rem; }
+  .site-header::after  { margin-top: 1.5rem; }
+
+  .header-ornament {
+    color: var(--gold);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+  }
+
+  .site-name-jp {
+    color: #fff;
+    font-size: clamp(26px, 5vw, 38px);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.4rem;
+  }
+  .site-name-en {
+    color: var(--gold-light);
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(14px, 2.5vw, 18px);
+    letter-spacing: 0.4em;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  .site-desc {
+    color: var(--text-muted);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+  }
+
+  /* ── NAV ── */
+  .site-nav {
+    background: var(--agatha);
+    border-bottom: 1px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-nav a {
+    color: #b8cfe0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1.1rem;
+    text-decoration: none;
+    border-right: 0.5px solid rgba(255,255,255,0.12);
+    transition: color 0.25s, background 0.25s;
+    display: block;
+  }
+  .site-nav a:last-child { border-right: none; }
+  .site-nav a:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+
+  /* ── MAIN WRAPPER ── */
+  .main-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ── SECTION COMMON ── */
+  .section {
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+    background: var(--white);
+    position: relative;
+  }
+  .section::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 0.5px solid var(--border);
+    pointer-events: none;
+  }
+
+  .section-head {
+    background: var(--sabre);
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 1px solid var(--gold);
+  }
+  .section-title-jp {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+  .section-title-en {
+    color: var(--gold);
+    font-family: 'IM Fell English', serif;
+    font-size: 11px;
+    font-style: italic;
+    letter-spacing: 0.2em;
+  }
+
+  .section-body { padding: 1.8rem 2rem; }
+
+  /* ── HERO / PROFILE ── */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .photo-box {
+    border: 1px solid var(--border-strong);
+    background: #d6e5f0;
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .photo-box svg { opacity: 0.4; }
+  .photo-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .profile-text h2 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--agatha);
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .profile-text p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--text-mid);
+    margin-bottom: 1rem;
+  }
+
+  /* 楽器タグ */
+  .instrument-wrap { margin-top: 1.2rem; }
+  .instrument-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    background: var(--sabre);
+    color: #b8cfe0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    padding: 4px 12px;
+    border: 0.5px solid var(--border);
+    letter-spacing: 0.05em;
+  }
+
+  /* 受賞 */
+  .award-box {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--border-strong);
+    background: var(--gold-pale);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .award-icon { color: var(--gold); font-size: 20px; }
+  .award-text {
+    font-size: 13px;
+    color: var(--text-dark);
+  }
+  .award-text strong { font-weight: 500; }
+
+  /* ── CONCERT LIST ── */
+  .concert-series {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .concert-series:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .series-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--agatha);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .series-title::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+  .series-period {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.8rem;
+  }
+  .series-intro {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+
+  /* ポップアップ付き公演 */
+  .concert-items { display: flex; flex-direction: column; gap: 6px; }
+  .concert-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.7rem 1rem;
+    border-left: 3px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .concert-item:hover {
+    border-color: var(--gold);
+    background: var(--gold-pale);
+  }
+  .ci-num {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--gold);
+    min-width: 28px;
+    padding-top: 2px;
+  }
+  .ci-body {}
+  .ci-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+  .ci-meta {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-muted);
+  }
+  .ci-detail {
+    display: none;
+    margin-top: 0.6rem;
+    font-size: 12px;
+    color: var(--text-mid);
+    line-height: 1.9;
+    padding: 0.8rem;
+    background: var(--cream);
+    border: 0.5px solid var(--border);
+  }
+  .ci-toggle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    color: var(--gold);
+    float: right;
+    margin-top: 2px;
+  }
+
+  /* その他公演 */
+  .other-concerts { display: flex; flex-direction: column; gap: 5px; }
+  .oc-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 0.5px solid rgba(201,168,76,0.15);
+    font-size: 13px;
+  }
+  .oc-year {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gold);
+    min-width: 40px;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+  .oc-text { color: var(--text-mid); line-height: 1.7; }
+
+  /* ── CD ── */
+  .cd-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  .cd-card {
+    border: 1px solid var(--border-strong);
+    overflow: hidden;
+    position: relative;
+  }
+  .cd-card::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 0.5px solid var(--border);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cd-cover {
+    background: var(--sabre);
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--gold);
+  }
+  .cd-cover svg { opacity: 0.5; }
+  .cd-cover-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+  .cd-info { padding: 0.8rem; }
+  .cd-num {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 2px;
+  }
+  .cd-title-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+  }
+  .cd-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── PUBLICATIONS (論文・著作) ── */
+  .pub-list { display: flex; flex-direction: column; gap: 0; }
+  .pub-item {
+    padding: 1rem 0;
+    border-bottom: 0.5px solid rgba(201,168,76,0.2);
+  }
+  .pub-item:first-child { padding-top: 0; }
+  .pub-item:last-child { border-bottom: none; }
+
+  .pub-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--agatha);
+    margin-bottom: 3px;
+    line-height: 1.6;
+  }
+  .pub-authors {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .pub-source {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-mid);
+  }
+
+  /* ── GRANTS ── */
+  .grant-list { display: flex; flex-direction: column; gap: 0; }
+  .grant-item {
+    padding: 0.9rem 0;
+    border-bottom: 0.5px solid rgba(201,168,76,0.2);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .grant-item:last-child { border-bottom: none; }
+  .grant-role {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #fff;
+    background: var(--agatha);
+    padding: 2px 8px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    letter-spacing: 0.05em;
+  }
+  .grant-role.buntan { background: var(--text-muted); }
+  .grant-body {}
+  .grant-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+    line-height: 1.6;
+  }
+  .grant-meta {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--text-muted);
+  }
+
+  /* ── CTA ── */
+  .cta-banner {
+    margin-top: 3rem;
+    border: 1px solid var(--gold);
+    background: var(--sabre);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 0.5px solid var(--border);
+    pointer-events: none;
+  }
+  .cta-ornament {
+    color: var(--gold);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+  }
+  .cta-text {
+    color: #a0b8cc;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 1.2rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    padding: 0.6rem 2rem;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+    cursor: pointer;
+    background: transparent;
+  }
+  .cta-btn:hover {
+    background: var(--gold);
+    color: var(--sabre);
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: #111e2b;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--gold);
+  }
+  .footer-text {
+    color: #3a5068;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,20,35,0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--white);
+    border: 1px solid var(--gold);
+    max-width: 680px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-box::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 0.5px solid var(--border);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .modal-head {
+    background: var(--sabre);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gold);
+    position: sticky;
+    top: 0;
+  }
+  .modal-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .modal-close {
+    color: var(--gold);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.2rem;
+  }
+  .modal-body {
+    padding: 1.5rem 2rem;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text-mid);
+    position: relative;
+    z-index: 1;
+  }
+  .modal-body h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--agatha);
+    margin: 1rem 0 0.4rem;
+  }
+  .modal-body ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .modal-body li { margin-bottom: 2px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    body::before, body::after { inset: 5px; }
+    .profile-grid { grid-template-columns: 1fr; }
+    .photo-box { aspect-ratio: 4/3; max-width: 220px; }
+    .cd-grid { grid-template-columns: repeat(2, 1fr); }
+    .site-nav a { font-size: 10px; padding: 0.6rem 0.7rem; }
+    .section-body { padding: 1.2rem 1rem; }
+    .main-wrap { padding: 0 0.8rem 3rem; }
+    .modal-body { padding: 1rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-ornament">Period Keyboard Instruments · Performer &amp; Researcher</div>
+  <h1 class="site-name-jp">山名 敏之</h1>
+  <div class="site-name-en">Toshiyuki Yamana</div>
+  <div class="site-desc">チェンバロ・クラヴィコード・フォルテピアノ ／ Harpsichord · Clavichord · Fortepiano</div>
+</header>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#profile">プロフィール</a>
+    <a href="#concerts">演奏会履歴</a>
+    <a href="#cd">CD</a>
+    <a href="#publications">著作・論文</a>
+    <a href="#grants">科学研究費</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- PROFILE -->
+  <section class="section" id="profile">
+    <div class="section-head">
+      <span class="section-title-jp">プロフィール</span>
+      <span class="section-title-en">Profile</span>
+    </div>
+    <div class="section-body">
+      <div class="profile-grid">
+        <div class="photo-box">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2C4A6E" stroke-width="1.2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span class="photo-label">写真を配置予定</span>
+        </div>
+        <div class="profile-text">
+          <h2>ピリオド鍵盤楽器奏者・研究者</h2>
+          <p>
+            バロック時代のチェンバロから近代のベヒシュタインまで、作曲された時代の様式で製作された「ピリオド楽器」を用いて演奏・研究を行う鍵盤楽器奏者。
+          </p>
+          <p>
+            現在の楽器（モダンピアノ）から遡るのではなく、歴史の流れに沿って各時代の鍵盤楽器と奏法の変遷を探究し、作曲家が意図した音楽表現に迫ることをミッションとしている。現代では忘れられがちな奏法や表現法に光をあて、演奏会・CD・著作・学会発表等を通じて広く発信している。
+          </p>
+          <p>
+            日本音楽学会・日本チェンバロ協会等での発表、大学での研究・教育活動を続けながら、CD三組をリリース。いずれも高い評価を得ている。
+          </p>
+
+          <div class="instrument-wrap">
+            <span class="instrument-label">INSTRUMENTS — 所有楽器</span>
+            <div class="tags">
+              <span class="tag">チェンバロ</span>
+              <span class="tag">クラヴィコード</span>
+              <span class="tag">ウィーン式フォルテピアノ（５オクターヴ）</span>
+              <span class="tag">ウィーン式フォルテピアノ（６オクターヴ）</span>
+              <span class="tag">プレイエル</span>
+              <span class="tag">ベヒシュタイン</span>
+            </div>
+          </div>
+
+          <div class="award-box">
+            <span class="award-icon">✦</span>
+            <span class="award-text"><strong>大桑文化奨励賞</strong>　2017年10月　大桑教育文化振興財団</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCERTS -->
+  <section class="section" id="concerts">
+    <div class="section-head">
+      <span class="section-title-jp">演奏会履歴</span>
+      <span class="section-title-en">Concert History</span>
+    </div>
+    <div class="section-body">
+
+      <!-- ハイドン大全 -->
+      <div class="concert-series">
+        <div class="series-title">ハイドン・クラヴィーア作品大全</div>
+        <div class="series-period">2009年5月 — 2011年12月　全11回　科学研究費補助金取得・入場料無料</div>
+        <p class="series-intro">
+          チェンバロ、クラヴィコード、フォルテピアノの三種の鍵盤楽器によってハイドンの全クラヴィーア作品を公開演奏。クラヴィコード中心の演奏からフォルテピアノ中心の演奏への転換という歴史的視点をもって、18世紀後半の鍵盤音楽事情を明らかにした記念碑的シリーズ。
+          <br>（各回の詳細は「▼詳細」をクリックしてご覧いただけます）
+        </p>
+        <div class="concert-items" id="haydn-list">
+          <!-- items inserted by JS -->
+        </div>
+      </div>
+
+      <!-- その他主要公演 -->
+      <div class="concert-series">
+        <div class="series-title">その他の主な演奏会</div>
+        <div class="series-period">新しい順</div>
+        <div class="other-concerts">
+          <div class="oc-item"><span class="oc-year">2021</span><span class="oc-text">放送大学「西洋音楽史」第11章出演　モーツァルト《クラヴィーアソナタKV545》ほか</span></div>
+          <div class="oc-item"><span class="oc-year">2020</span><span class="oc-text">ミュージアムサロンコンサート「シューベルトの連弾作品にみるベートーヴェンへのコンプレックス」　浜松市楽器博物館　山名朋子と</span></div>
+          <div class="oc-item"><span class="oc-year">2020</span><span class="oc-text">J.S.バッハ：ゴルトベルク変奏曲　いわき市立美術館　YouTube動画配信</span></div>
+          <div class="oc-item"><span class="oc-year">2020</span><span class="oc-text">宮下直子・山名敏之 ２台ピアノリサイタル　ドビュッシー＆ラヴェル　和歌山県民文化会館小ホール</span></div>
+          <div class="oc-item"><span class="oc-year">2019</span><span class="oc-text">いわき室内楽協会コンサート〈第24回〉　ヴィルタス・クヮルテット＆山名敏之　ハイドン：チェンバロ協奏曲、ショスタコーヴィチ：ピアノ五重奏曲</span></div>
+          <div class="oc-item"><span class="oc-year">2017</span><span class="oc-text">小倉貴久子の《モーツァルトのクラヴィーアのある部屋》第29回　東京オペラシティ近江楽堂　２台フォルテピアノ</span></div>
+          <div class="oc-item"><span class="oc-year">2017</span><span class="oc-text">シューベルト時代のオリジナル楽器による《冬の旅》　大阪クベット・ディ・ムジカ　大元和憲（バリトン）</span></div>
+          <div class="oc-item"><span class="oc-year">2016</span><span class="oc-text">伊東信宏企画 レクチャーコンサート「声のような音/音のような声」三輪眞弘作品集　ザ・フェニックスホール（大阪）チェンバロ通奏低音</span></div>
+          <div class="oc-item"><span class="oc-year">2016</span><span class="oc-text">チェンバロをめぐる愛と死とユーモア～その200年の歴史～　NPO法人「りんくうメディカルプラザ」主催</span></div>
+          <div class="oc-item"><span class="oc-year">2015</span><span class="oc-text">山名敏之チェンバロ on カスケード　いわきアリオス　J.S.バッハ：平均律クラヴィーア曲集 ほか</span></div>
+          <div class="oc-item"><span class="oc-year">2004</span><span class="oc-text">ピアノ生誕300年 シリーズ第4回「ショパンの愛と悲しみ～ショパンの愛したピアノ・プレイエル」</span></div>
+          <div class="oc-item"><span class="oc-year">2003</span><span class="oc-text">ザ・フェニックスホール レクチャーコンサートシリーズ7「ピアノはいつピアノになったか？」第4回 シューベルトの悩み</span></div>
+          <div class="oc-item"><span class="oc-year">2001</span><span class="oc-text">クラシックコンサート リビエール・マチネ No.2　F.シューベルト 3つのピアノ曲D.946、ソナタD.959</span></div>
+          <div class="oc-item"><span class="oc-year">2000</span><span class="oc-text">クラシックコンサート リビエール・マチネ No.1　ハイドン、モーツァルト、エマヌエル・バッハ</span></div>
+          <div class="oc-item"><span class="oc-year">2000</span><span class="oc-text">スペース クリストーフォリ堺 コンサート2000　ショパン作品（プレイエルにて）</span></div>
+          <div class="oc-item"><span class="oc-year">1999</span><span class="oc-text">フォルテピアノ・リサイタル　大倉山水曜日コンサートVol.717　モーツァルト：ファンタジー KV397 ほか</span></div>
+          <div class="oc-item"><span class="oc-year">1998</span><span class="oc-text">フォルテピアノ・デュオ　大倉山水曜日コンサートVol.696　山名朋子と　モーツァルト：ソナタKV381 ほか</span></div>
+          <div class="oc-item"><span class="oc-year">1998</span><span class="oc-text">ローゼンベルガーの夕べ フォルテピアノ・リサイタル</span></div>
+          <div class="oc-item"><span class="oc-year">1997</span><span class="oc-text">アンサンブルの夕べ　メンデルスゾーン ピアノトリオ第1番、ベートーヴェン チェロソナタ第4番 ほか</span></div>
+          <div class="oc-item"><span class="oc-year">1996</span><span class="oc-text">Liszt Piano Concerto No.1　東京交響楽団　指揮：小林研一郎</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CD -->
+  <section class="section" id="cd">
+    <div class="section-head">
+      <span class="section-title-jp">CD ディスコグラフィー</span>
+      <span class="section-title-en">Discography</span>
+    </div>
+    <div class="section-body">
+      <p style="font-size:13px;color:var(--text-muted);font-family:'Noto Sans JP',sans-serif;font-weight:300;margin-bottom:1.5rem;">
+        ※ CDの詳細・購入は「クベット・ディ・ムジカ」をご覧ください。
+      </p>
+      <div class="cd-grid">
+        <div class="cd-card">
+          <div class="cd-cover">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1">
+              <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+            <span class="cd-cover-label">ジャケット写真を配置</span>
+          </div>
+          <div class="cd-info">
+            <div class="cd-num">Vol. I</div>
+            <div class="cd-title-text">CD 第1集</div>
+            <div class="cd-sub">タイトル・詳細をご記入ください</div>
+          </div>
+        </div>
+        <div class="cd-card">
+          <div class="cd-cover">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1">
+              <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+            <span class="cd-cover-label">ジャケット写真を配置</span>
+          </div>
+          <div class="cd-info">
+            <div class="cd-num">Vol. II</div>
+            <div class="cd-title-text">CD 第2集</div>
+            <div class="cd-sub">タイトル・詳細をご記入ください</div>
+          </div>
+        </div>
+        <div class="cd-card">
+          <div class="cd-cover">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1">
+              <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+            <span class="cd-cover-label">ジャケット写真を配置</span>
+          </div>
+          <div class="cd-info">
+            <div class="cd-num">Vol. III</div>
+            <div class="cd-title-text">CD 第3集</div>
+            <div class="cd-sub">タイトル・詳細をご記入ください</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications">
+    <div class="section-head">
+      <span class="section-title-jp">著作・論文</span>
+      <span class="section-title-en">Publications</span>
+    </div>
+    <div class="section-body">
+
+      <h3 style="font-size:13px;font-weight:500;color:var(--gold);letter-spacing:0.15em;font-family:'Noto Sans JP',sans-serif;margin-bottom:1rem;">— 書籍等出版物</h3>
+      <div class="pub-list" style="margin-bottom:2rem;">
+        <div class="pub-item">
+          <div class="pub-title">ムジカ ノーヴァ 2024年09月号「クラヴィコード、チェンバロから考えるハイドン作品の奏法」</div>
+          <div class="pub-authors">山名 敏之　（単著）</div>
+          <div class="pub-source">音楽之友社　2024年8月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">チェンバロ大事典（分担執筆：クラヴィコード）</div>
+          <div class="pub-authors">日本チェンバロ協会</div>
+          <div class="pub-source">春秋社　2022年10月　ISBN: 9784393930410</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">シューベルトと当時のウィーンのピアノ</div>
+          <div class="pub-authors">山名 敏之</div>
+          <div class="pub-source">ムジカノーヴァ（別冊）135–142　1996年</div>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;font-weight:500;color:var(--gold);letter-spacing:0.15em;font-family:'Noto Sans JP',sans-serif;margin-bottom:1rem;">— 論文</h3>
+      <div class="pub-list">
+        <div class="pub-item">
+          <div class="pub-title">W.A. モーツァルト：クラヴィーア・ソナタK.331の自筆譜一部発見（2014年）後の新しい2つの原典版（ヘンレ社、全音楽譜出版社）</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">日本チェンバロ協会年報 創刊号（1）74–84　2017年</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">18世紀、19世紀イギリス式ピアノにおける止音装置の変遷について ―ブロードウッド社を中心に―</div>
+          <div class="pub-authors">筒井はる香・山名 仁（担当区分：責任著者）</div>
+          <div class="pub-source">同志社女子大学総合文化研究所紀要 第41巻　2024年7月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">和楽器による授業において教師が知っておくべき演奏上のレトリック</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 68（2）43–47　2018年2月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">デクラメーションから読み解く《朧月夜》の伴奏法</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 68（2）49–54　2018年2月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルト《クラヴィーアソナタ》（KV331）における演奏様式の歴史的変遷―スラー分析からみえる演奏法</div>
+          <div class="pub-authors">山名 敏之</div>
+          <div class="pub-source">音楽表現学のフィールド２　日本音楽表現学会[編]　2　39–47　2016年9月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">西洋クラシック 音楽の拍節感にみる二つの異文化化（第１部 音楽における異文化受容）</div>
+          <div class="pub-authors">山名 敏之</div>
+          <div class="pub-source">音楽表現学のフィールド　日本音楽表現学会[編]　東京堂出版　66–75　2010年12月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">小学校との連携による創作をテーマとした音楽科の授業づくり——公立学校を拠点にした理論と実践の統合を図る教員養成プログラム開発の一例</div>
+          <div class="pub-authors">菅 道子・山崎 由可里・山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部教育実践総合センター紀要 19（19）111–119　2009年　[査読有り]</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">「静けさを聴く」ことをテーマにした参加型音楽コンサートづくりの試み——教員養成における芸術教科と障害児教育の「融合カリキュラム」（その2）</div>
+          <div class="pub-authors">山崎 由可里・山名 敏之・山名 仁・菅 道子</div>
+          <div class="pub-source">和歌山大学教育学部紀要 教育科学 58　47–57　2008年2月　[査読有り]</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルトの鍵盤音楽作品に内在するクラヴィコードの演奏テクニック</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 57　43–48　2007年2月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルトの鍵盤音楽とヴァルター・ピアノ</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 57　39–42　2007年2月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">「障害児のための芸術教育基礎論」の到達点と課題——アクセントの周期性に焦点をあてた身体表現による三拍子理解を中心として</div>
+          <div class="pub-authors">山名 敏之・山名 仁・菅 道子・山崎 由可里</div>
+          <div class="pub-source">和歌山大学教育学部紀要 教育科学 56　81–92　2006年2月　[査読有り]</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">教育学部における総合的な芸術普及活動の授業の試み——知的障害養護学校における参加型音楽コンサート作りを事例として</div>
+          <div class="pub-authors">菅 道子・山名 敏之・山名 仁</div>
+          <div class="pub-source">関西楽理研究（関西楽理研究会）（22）49–63　2005年</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">知的障害養護学校における芸術教育の観点を取り入れた作業学習についての試み——高等部窯業班と教育学部生の交流学習を通して</div>
+          <div class="pub-authors">寺川 剛央・山崎 由可里・山名 敏之・山名 仁・菅 道子</div>
+          <div class="pub-source">和歌山大学教育学部教育実践総合センター紀要 No.15　121–129　2005年</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">教員養成における芸術教科と障害児教育の「融合カリキュラム」の試み——障害児のための手指を使った芸術活動を通して</div>
+          <div class="pub-authors">菅 道子・山名 敏之・山名 仁・山崎 由可里・寺川 剛央</div>
+          <div class="pub-source">和歌山大学教育学部教育実践総合センター紀要 No.15　105–114　2005年</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルトの後期クラヴィーア曲における前打音の表記法</div>
+          <div class="pub-authors">山名 敏之・山名 仁</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 54　31–41　2004年2月</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルトのグラヴィーアソナタKV331における前打音の演奏法</div>
+          <div class="pub-authors">山名 敏之</div>
+          <div class="pub-source">和歌山大学教育学部紀要 人文科学 第52集 52　85–105　2002年</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">モーツァルトのミュンヘン旅行（1774–75年）</div>
+          <div class="pub-authors">山名 敏之</div>
+          <div class="pub-source">和歌山大学教育学部紀要 教育科学 第50集（50）65–70　2000年</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRANTS -->
+  <section class="section" id="grants">
+    <div class="section-head">
+      <span class="section-title-jp">科学研究費</span>
+      <span class="section-title-en">Research Grants</span>
+    </div>
+    <div class="section-body">
+      <div class="grant-list">
+        <div class="grant-item">
+          <span class="grant-role">代表</span>
+          <div class="grant-body">
+            <div class="grant-title">バロックおよび古典派の演奏様式を踏まえたショパンのアーティキュレーション法研究</div>
+            <div class="grant-meta">2025年4月 — 2029年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role buntan">分担</span>
+          <div class="grant-body">
+            <div class="grant-title">19世紀イギリス式ピアノの止音装置の変遷と演奏空間との関連について</div>
+            <div class="grant-meta">2024年4月 — 2029年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role">代表</span>
+          <div class="grant-body">
+            <div class="grant-title">ペダルを離す指示の位置に注目したピリオド楽器によるショパンのペダル法研究</div>
+            <div class="grant-meta">2020年4月 — 2025年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role buntan">分担</span>
+          <div class="grant-body">
+            <div class="grant-title">18世紀、19世紀のイギリス式ピアノにおける止音装置の変遷と演奏法の関係について</div>
+            <div class="grant-meta">2019年4月 — 2023年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role">代表</span>
+          <div class="grant-body">
+            <div class="grant-title">「革かフェルトか！」打弦素材の変換がもたらした鍵盤音楽におけるパラダイム転換研究</div>
+            <div class="grant-meta">2016年4月 — 2020年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role">代表</span>
+          <div class="grant-body">
+            <div class="grant-title">1820年代のオリジナルフォルテピアノによるシューベルト4手連弾作品研究</div>
+            <div class="grant-meta">2013年4月 — 2016年3月　基盤研究（C）</div>
+          </div>
+        </div>
+        <div class="grant-item">
+          <span class="grant-role">代表</span>
+          <div class="grant-body">
+            <div class="grant-title">クラヴィコードの演奏法を基本としたハイドンのクラヴィーア作品演奏法研究</div>
+            <div class="grant-meta">2009年4月 — 2012年3月　基盤研究（C）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner" id="contact">
+    <div class="cta-ornament">✦ お問い合わせ・演奏会情報・CD購入 ✦</div>
+    <p class="cta-text">
+      演奏会の最新情報・チケット予約・CD購入・各種お問い合わせは<br>
+      「クベット・ディ・ムジカ」をご覧ください。
+    </p>
+    <a href="#" class="cta-btn">クベット・ディ・ムジカへ →</a>
+  </div>
+
+</div><!-- /main-wrap -->
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p class="footer-text">© Toshiyuki Yamana　山名 敏之　All Rights Reserved</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span class="modal-title" id="modal-title"></span>
+      <button class="modal-close" id="modal-close" aria-label="閉じる">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const haydnData = [
+  {
+    num:"第1回",
+    title:"フォルテピアノへの転換期から18世紀器楽曲の終焉へ",
+    meta:"2009年5月30日　和歌山メディア・アート・ホール　フォルテピアノ",
+    highlight:true,
+    detail:`<p>まずフォルテピアノで演奏することが想定されていたと考えられる作品を採り上げ、ハイドン作品の魅力について再認識していただくことを企図した第1回。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第56番 ニ長調 (c.1782-1784) Hob.XVI/42</li>
+      <li>カプリッチョ ト長調（1765作曲，1788初版）"Acht Sauschneider müssen seyn" Hob.XVII/1</li>
+      <li>ソナタ第62番 変ホ長調（1794）Hob.XVI/52</li>
+      <li>ソナタ第10番 ハ長調（1766以前）Hob.XVI/1</li>
+      <li>ソナタ第58番 ハ長調（1789）Hob.XVI/48</li>
+      <li>ソナタ第59番 変ホ長調（1789-90）Hob.XVI/49</li>
+    </ul>`
+  },
+  {
+    num:"第2回",
+    title:"クラヴィコードとハイドン",
+    meta:"2009年7月5日　熊取交流センター煉瓦館　クラヴィコード",
+    detail:`<p>20世紀の音楽事情からあまりにもかけ離れた性格を持つクラヴィコードの音世界。その特殊性と18世紀の音の環境を想像しながらハイドン作品の魅力を再考する。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第15番 ホ長調 (1766年以前) Hob.XVI/13</li>
+      <li>アリエッタと12の変奏曲 第1番 変ホ長調（1788/89年初版）Hob.XVII/3</li>
+      <li>ソナタ第53番 ホ短調（1781/82年頃？）Hob.XVI/34</li>
+      <li>ソナタ第44番 ヘ長調（1774～1776年）Hob.XVI/29</li>
+      <li>ソナタ第14番 ハ長調（1766年以前）Hob.XVI/3</li>
+      <li>ソナタ第2番 ハ長調（1766年以前）Hob.XVI/7</li>
+      <li>ソナタ第48番 ハ長調（1777/79年頃？）Hob.XVI/35</li>
+    </ul>`
+  },
+  {
+    num:"第3回",
+    title:"チェンバロによる響きの再考",
+    meta:"2009年7月26日　熊取交流センターコットンホール　チェンバロ",
+    detail:`<p>ハイドンのクラヴィーア作品は、チェンバロの黄昏・フォルテピアノの黎明・クラヴィコードという3つの要素が複雑に絡み合う。チェンバロの響きを糸口に解き明かす試み。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第9番 ニ長調 (1766年以前) Hob.XVI/4</li>
+      <li>ソナタ第1番 ト長調 (1766年以前) Hob.XVI/8</li>
+      <li>ソナタ第43番 変ホ長調（1776年）Hob.XVI/28</li>
+      <li>ソナタ第13番 ト長調（1766年以前）Hob.XVI/6</li>
+      <li>アリエッタと12の変奏曲 第2番 イ長調（1788/89年初版）Hob.XVII/2</li>
+      <li>ソナタ第50番 ニ長調（1777/79年頃？）Hob.XVI/37</li>
+    </ul>`
+  },
+  {
+    num:"第4回",
+    title:"ハイドンの疾風怒濤",
+    meta:"2009年9月5日　岸和田 自泉会館　クラヴィコード",
+    detail:`<p>1770年代のドイツを席巻した文学運動「疾風怒濤（Sturm und Drang）」とハイドン。ソナタ第33番ハ短調に典型的な衝動的感情の表出と、精神の均衡を保とうとする意志力をクラヴィコードで明らかにする。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第6番 ハ長調 (1766年以前) Hob.XVI/10</li>
+      <li>ソナタ第32番 ト短調 (1768/70年頃) Hob.XVI/44</li>
+      <li>ソナタ第35番 変イ長調（1771/73年頃）Hob.XVI/43</li>
+      <li>ソナタ第34番 ニ長調（1771/73年頃）Hob.XVI/33</li>
+      <li>ソナタ第3番 ヘ長調 (1766年以前) Hob.XVI/9</li>
+      <li>ソナタ第33番 ハ短調（1771年）Hob.XVI/20</li>
+    </ul>`
+  },
+  {
+    num:"第5回",
+    title:"偽作 真作",
+    meta:"2009年10月31日　和歌山メディア・アート・ホール　チェンバロ・クラヴィコード",
+    detail:`<p>真作と偽作が混在するハイドン初期作品の真偽問題に触れながら、ヘンレ版・ウィーン原典版第1巻を中心に2台の楽器の音を比較しながら聴いていただいた回。</p>
+    <h3>演奏曲目（抜粋）</h3>
+    <ul>
+      <li>ソナタ第19番 ホ短調 Hob.XVI/47（偽作可能性）</li>
+      <li>ソナタ第57番 ヘ長調（1788年出版）Hob.XVI/47</li>
+      <li>ソナタ第21〜27番（草稿目録のみに記録された作品群）</li>
+      <li>ソナタ第52番 ト長調（1780年）Hob.XVI/39 ほか</li>
+    </ul>`
+  },
+  {
+    num:"第6回",
+    title:"円熟への道のり",
+    meta:"2010年2月7日　京都poco a poco　クラヴィコード",
+    detail:`<p>演奏されることの少ないハイドン初期・中期作品をクラヴィコードで演奏し、ピアノやフォルテピアノでは伝わりにくい魅力と作品の成熟過程を明らかにした。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第7番 ニ長調 (1766年以前) Hob.XVI/D1</li>
+      <li>ソナタ第30番 ニ長調（1767年）Hob.XVI/19</li>
+      <li>ソナタ第33番 ハ短調（1771年）Hob.XVI/20</li>
+      <li>ソナタ第36番 ハ長調（1773年）Hob.XVI/21</li>
+      <li>ソナタ第46番 ホ長調（1776年）Hob.XVI/31</li>
+      <li>ソナタ第55番 変ロ長調（1782/1784年）Hob.XVI/41</li>
+    </ul>`
+  },
+  {
+    num:"第7〜10回",
+    title:"クラヴィコードで聴くハイドン初期傑作 ほか",
+    meta:"2010年4月〜2011年10月　各地",
+    detail:`<p>第7回（2010.4 熊取）クラヴィコードにふさわしい初期作品の再発見。第8回（2010.5 岸和田）強弱記号の謎：クラヴィコードとフォルテピアノの比較。第9回（2010.12 京都）偽作・真作 II。第10回（2011.10 大阪）ハイドンのレトリック：ユーモアの音楽的表現を探る。</p>`
+  },
+  {
+    num:"最終回（第11回）",
+    title:"３種類の楽器による聴き比べ",
+    meta:"2011年12月27日　和歌山市民会館",
+    highlight:true,
+    detail:`<p>シリーズ全体の総括として、クラヴィコード・チェンバロ・フォルテピアノの3種による演奏テクニックの統括的考察を行った最終回。</p>
+    <p><strong>結論：</strong>クラヴィコードの演奏テクニックあるいはクラヴィコード的な着想は、予想に反してハイドンの全クラヴィーア作品に敷衍されるべきである。</p>
+    <h3>演奏曲目</h3>
+    <ul>
+      <li>ソナタ第42番 ト長調（チェンバロ）</li>
+      <li>カプリッチョ ト長調 Hob.XVII/1「8人のザウシュナイダーたちに違いない」（3種の楽器それぞれで演奏）</li>
+      <li>６つの変奏曲 ハ長調（フォルテピアノ）</li>
+      <li>ソナタ第54番 ト長調（チェンバロ）</li>
+    </ul>`
+  }
+];
+
+// Render Haydn list
+const list = document.getElementById('haydn-list');
+haydnData.forEach((d,i) => {
+  const el = document.createElement('div');
+  el.className = 'concert-item';
+  el.innerHTML = `
+    <div class="ci-num">${d.num}</div>
+    <div class="ci-body">
+      <div class="ci-title">${d.title}${d.highlight ? ' ✦' : ''}<span class="ci-toggle">▼ 詳細</span></div>
+      <div class="ci-meta">${d.meta}</div>
+    </div>
+  `;
+  el.addEventListener('click', () => openModal(d.title, d.detail));
+  list.appendChild(el);
+});
+
+// Modal
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalBody = document.getElementById('modal-body');
+const modalClose = document.getElementById('modal-close');
+
+function openModal(title, body) {
+  modalTitle.textContent = title;
+  modalBody.innerHTML = body;
+  modal.classList.add('open');
+}
+modalClose.addEventListener('click', () => modal.classList.remove('open'));
+modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('open'); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') modal.classList.remove('open'); });
+</script>
+</body>
+</html>
